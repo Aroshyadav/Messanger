@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatNut Chat</title>
+
+    <link rel="stylesheet" href="chat.css">
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <a href="#" id="back-to-dashboard" class="back-btn">&larr;</a>
+            <div class="header-info">
+                <h2>chatNut</h2>
+                <span>Online</span>
+            </div>
+        </header>
+
+        <div id="messages">
+        </div>
+
+        <div class="chat-input-area">
+            <input type="file" id="media-input" accept="image/*,video/*" style="display: none;">
+
+            <button type="button" id="media-btn" class="icon-btn">➕</button>
+
+            <form id="chat-form">
+                <input id="msg" placeholder="Type a message..." autocomplete="off">
+                <button type="submit" id="send-btn"> 
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+
+</body>
+
+</html>
